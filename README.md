@@ -8,3 +8,20 @@ https://hlum.github.io/bunnybank-site/
 - `support.html`: the Support URL.
 
 The source lives in the app repository's `website/` folder; copy it here to publish.
+
+`bunny.js` plays Mochi from the sprite strips in `img/bunny-<motion>.webp`
+(13 frames each, cut from the app's `Assets.xcassets/Characters/Bunny` with one
+shared crop), using the same timings as `CharacterMotion.swift`. Screens in
+`img/screen-*.webp` are cropped from the App Store screenshots.
+
+Japanese pages live in `ja/` and share the root's CSS, JS and images. English
+pages send visitors whose timezone is Asia/Tokyo, or whose first browser
+language is Japanese, to `ja/` (inline script in each page's `<head>`); picking
+a language in the header overrides that (`localStorage` "bb-lang").
+
+The site is light by default; the header's moon button switches to dark and is
+remembered ("bb-theme").
+
+`demo.js` is the "learns your day" demo on the home pages: a map and an Add form
+that fills itself in, one scene per suggestion signal. Its reason lines use the
+app's own wording (`Core/Suggestions/SuggestionExplanation.swift`).

@@ -3,27 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Visitors in Japan, or whose browser's first language is Japanese, get /ja/,
+    // unless they've picked a language with the switcher (site.js).
+    document.documentElement.className = "js";
+    try { if (localStorage.getItem("bb-theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+    (function () {
+      var pick; try { pick = localStorage.getItem("bb-lang"); } catch (e) {}
+      if (pick === "en") return;
+      var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+      var first = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
+      if (pick === "ja" || tz === "Asia/Tokyo" || first.indexOf("ja") === 0)
+        location.replace("ja/" + location.pathname.split("/").pop() + location.search + location.hash);
+    })();
+  </script>
   <link rel="icon" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
+  <link rel="alternate" hreflang="en" href="https://hlum.github.io/bunnybank-site/support.html">
+  <link rel="alternate" hreflang="ja" href="https://hlum.github.io/bunnybank-site/ja/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://hlum.github.io/bunnybank-site/support.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600,100,0;1,9..144,600,100,1&display=swap">
   <link rel="stylesheet" href="style.css">
   <title>BunnyBank Support</title>
+  <meta name="theme-color" content="#FBF5EA">
   <meta name="description" content="Help and support for BunnyBank, the expense tracker for iPhone.">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="bar">
     <div class="wrap">
       <a class="brand" href="./"><img src="icon.png" alt=""><span>BunnyBank</span></a>
-      <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+      <nav><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a><a class="lang" href="ja/support.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a><button class="theme" type="button" aria-pressed="false" aria-label="Dark mode"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></nav>
     </div>
   </header>
-  <main class="wrap doc">
-    <h1>Help &amp; Support</h1>
-    <p class="updated">Questions, bugs or ideas? I read every message.</p>
+  <main id="main" class="wrap doc">
+    <div class="doc-head">
+      <div>
+        <h1>Help &amp; Support</h1>
+        <p class="updated">Questions, bugs or ideas? I read every message.</p>
+      </div>
+      <div class="mochi" data-motion="think" data-rest="4" aria-label="Mochi thinking"></div>
+    </div>
 
-    <section class="contact">
+    <section class="note">
       <h2>Contact</h2>
       <p>Email me and I'll get back to you as soon as I can, usually within a few days.</p>
-      <p><a class="pill" href="mailto:grander_rivulet_0q@icloud.com?subject=BunnyBank%20support">grander_rivulet_0q@icloud.com</a></p>
+      <p><a class="contact-mail" href="mailto:grander_rivulet_0q@icloud.com?subject=BunnyBank%20support">grander_rivulet_0q@icloud.com</a></p>
       <p>If something went wrong, it helps to include your iPhone model, your iOS version, and what you were doing when it happened.</p>
     </section>
 
@@ -53,8 +80,23 @@
     </div>
 
     <div class="qa">
+      <h2>How does it know what to suggest?</h2>
+      <p>From your own records, worked out on your iPhone: where you are, the time of day and day of the week, the day of the month, today's calendar and the amounts you usually spend. Location and calendar are optional. You can reset what suggestions have learned, or erase saved locations, in <strong>Settings › Smart suggestions</strong>.</p>
+    </div>
+
+    <div class="qa">
       <h2>How do I use BunnyBank with Siri?</h2>
       <p>Try "Add an expense in BunnyBank", "How much have I spent this week in BunnyBank?" or, if you've made a template called Coffee, "Coffee in BunnyBank". You'll find all of BunnyBank's actions in the Shortcuts app too.</p>
+    </div>
+
+    <div class="qa">
+      <h2>I moved to another country. How do I change currency?</h2>
+      <p>Go to <strong>Settings › Home Currency</strong> and pick the new one. If you've recorded things in your old currency, BunnyBank asks what you'd like: use both currencies side by side, or switch over. Switching, you choose whether past expenses are converted at an exchange rate you type in, kept as they were, or relabelled (if they were really in the new currency all along). Converted expenses remember their original amount, so you can put them back from the same screen.</p>
+    </div>
+
+    <div class="qa">
+      <h2>Can I see my spending in each currency?</h2>
+      <p>Yes, with <strong>Multiple Currencies</strong>: the Summary gets a currency menu, and the Add form can log an expense abroad in the local currency. Without it, totals are in your home currency and anything in another currency is shown next to them.</p>
     </div>
 
     <div class="qa">
@@ -65,8 +107,10 @@
   <footer>
     <div class="wrap">
       <span>© 2026 Hlwan Aung Phyo</span>
-      <span><a href="./">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></span>
+      <span><a href="./">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="ja/support.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></span>
     </div>
   </footer>
+  <script src="site.js" defer></script>
+  <script src="bunny.js" defer></script>
 </body>
 </html>

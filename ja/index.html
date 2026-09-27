@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className = "js"; try { if (localStorage.getItem("bb-theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}</script>
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="alternate" hreflang="en" href="https://hlum.github.io/bunnybank-site/">
+  <link rel="alternate" hreflang="ja" href="https://hlum.github.io/bunnybank-site/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://hlum.github.io/bunnybank-site/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600,100,0;1,9..144,600,100,1&family=Zen+Maru+Gothic:wght@700&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <title>BunnyBank · かわいくてプライベートな家計簿アプリ</title>
+  <meta name="description" content="BunnyBankは、あなたのお金の使い方を覚えてくれる、かわいくてプライベートな家計簿アプリです。場所・時間・今日の予定から、いつものお店やカテゴリを先回りして入力。データはあなたのiPhoneとiCloudの中だけに。">
+  <meta property="og:title" content="BunnyBank">
+  <meta property="og:description" content="あなたの一日を覚える、かわいくてプライベートな家計簿。記録はワンタップ。">
+  <meta property="og:image" content="https://hlum.github.io/bunnybank-site/icon.png">
+  <meta name="theme-color" content="#FBF5EA">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="../icon.png" alt=""><span>BunnyBank</span></a>
+      <nav><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a><a class="lang" href="../" hreflang="en" lang="en" data-lang="en">English</a><button class="theme" type="button" aria-pressed="false" aria-label="ダークモード"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">iPhoneのための、お金の日記</p>
+        <h1>記録はワンタップ。<br>数えるのは<em>Mochi</em>。</h1>
+        <p class="lede">いつ・どこで・何に使うかをBunnyBankが覚えるから、ほとんどの支出はワンタップ。レシートを撮っても、話しかけてもOK。今月あといくら使えるかも、ひと目でわかります。</p>
+        <p class="status"><strong>App Storeで近日公開</strong><span>無料ダウンロード・サブスクなし</span></p>
+      </div>
+      <div class="stage">
+        <div class="phone"><img src="../img/screen-add-ja.webp" width="600" height="1296" alt="支出を追加画面：ラテ¥520。まちかどカフェと食事がすでに候補に出ている。"></div>
+        <div class="mochi" data-motion="greet" data-then="idle" aria-label="手をふるうさぎのMochi"></div>
+        <img class="prop prop-sparkle" src="../img/prop-sparkle.webp" alt="">
+        <img class="prop prop-coin" src="../img/prop-coin.webp" alt="">
+      </div>
+    </section>
+
+    <section class="learn" id="learn" aria-labelledby="learn-title">
+      <div class="section-head reveal">
+        <p class="eyebrow">スマート候補</p>
+        <h2 id="learn-title">あなたの一日を覚えるから、ほとんど打たなくていい。</h2>
+        <p>今いる場所、時間、今日の予定、いつもの金額。BunnyBankはそれを手がかりに、次に選ぶお店・カテゴリ・メモを先回りして用意します。</p>
+      </div>
+
+      <div class="demo reveal" data-demo>
+        <p>朝8時すぎの駅前では、いつものカフェが先頭に。お昼はカレンダーにあるお店が先に。帰り道は、まだ登録していない近くのお店も候補に。そして25日には家賃が待っています。</p>
+      </div>
+
+      <ul class="signals-list">
+        <li class="reveal">
+          <svg viewBox="-10 -10 20 20" aria-hidden="true"><path d="M0-8a6 6 0 0 1 6 6c0 5-6 11-6 11s-6-6-6-11a6 6 0 0 1 6-6zM0-4a2 2 0 1 0 0.01 0"/></svg>
+          <h3>今いる場所</h3>
+          <p>この近くでいつも使うお店が先頭に。まだ登録していない近くのお店も表示され、お店の場所は記録した場所から自然に覚えます。</p>
+        </li>
+        <li class="reveal d1">
+          <svg viewBox="-10 -10 20 20" aria-hidden="true"><path d="M0-8a8 8 0 1 1 0 16 8 8 0 0 1 0-16zM0-4v4l3 2"/></svg>
+          <h3>時間</h3>
+          <p>朝のコーヒー、金曜の飲み会、25日の家賃。時間帯・曜日・月の中の日付が、すべて手がかりになります。</p>
+        </li>
+        <li class="reveal d2">
+          <svg viewBox="-10 -10 20 20" aria-hidden="true"><path d="M-7-5h14v12h-14zM-7-1h14M-3-8v5M3-8v5"/></svg>
+          <h3>今日の予定</h3>
+          <p>カレンダーに「Ayaとディナー」とあれば食事が先に。お店の名前があれば、そのお店が先に。読むのは今日の予定だけです。</p>
+        </li>
+        <li class="reveal d3">
+          <svg viewBox="-10 -10 20 20" aria-hidden="true"><path d="M-7 0a7 7 0 0 1 12-5l2 2M7 0a7 7 0 0 1-12 5l-2-2M5-7v4h4M-5 7v-4h-4"/></svg>
+          <h3>いつものくせ</h3>
+          <p>¥480ならたぶんコーヒー。電車のあとにいつも記録するものも覚えます。くせは変わるもの。3週間前の習慣は、今日の半分の重みになります。</p>
+        </li>
+      </ul>
+
+      <p class="learn-private reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg>
+        <span><b>ぜんぶ、あなたのiPhoneの中で。</b>場所は支出と一緒に、iPhoneとあなたのiCloudにだけ保存されます。カレンダーの予定は保存も送信もしません。位置情報もカレンダーも使うかどうかは自由で、学習した内容は設定からいつでも消去できます。</span>
+      </p>
+    </section>
+
+    <div class="section-head reveal">
+      <h2>がんばらない家計簿。</h2>
+      <p>表計算も、罪悪感もいりません。勝手に埋まっていく小さな日記で、今月のお金がすっきり見えます。</p>
+    </div>
+
+    <section class="feature">
+      <div class="feature-art reveal">
+        <div class="phone"><img src="../img/screen-summary-ja.webp" width="600" height="1296" loading="lazy" alt="サマリー画面：今月の残りは¥19,100、残り4日は1日あたり¥4,775。"></div>
+        <div class="mochi" data-motion="present" data-rest="3" aria-label="予算を指さすMochi"></div>
+      </div>
+      <div class="reveal d1">
+        <h3>今日あといくら、までわかる。</h3>
+        <p>カテゴリごとに予算を決めると、残りを「1日あたりの目安」に。今日いくらまで使っても、月末に間に合うかがわかります。</p>
+        <ul class="ticks">
+          <li>週・月・年の収入、支出、貯金</li>
+          <li>カテゴリ別・お店別・日別のグラフ</li>
+          <li>週と月のやさしいふりかえりと、固定費のリマインダー</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="feature-art reveal">
+        <div class="phone"><img src="../img/screen-ask-ja.webp" width="600" height="1296" loading="lazy" alt="アシスタントが今月の支出を、カテゴリ別のグラフつきで答えている画面。"></div>
+        <div class="mochi" data-motion="think" aria-label="考えごとをするMochi"></div>
+      </div>
+      <div class="reveal d1">
+        <h3>聞けば、グラフで答えてくれる。</h3>
+        <p>「どこで一番使ってる？」「今週の食費はいくら？」アシスタントが数字とグラフで答えます。支出の追加も、話しかけるだけ。</p>
+        <ul class="ticks">
+          <li>Apple Intelligenceで、iPhoneの中で動作</li>
+          <li>聞いたことが開発者やほかの誰かに送られることはありません</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="more">
+      <h2 class="reveal">ほかにも、いろいろ</h2>
+      <dl>
+        <div class="reveal"><dt>レシートを撮るだけ</dt><dd>紙のレシートを撮るか、ネット注文のスクショを共有すると、自動で入力されます。</dd></div>
+        <div class="reveal d1"><dt>話すだけ</dt><dd>「ローソンでランチ、850円」。確認して保存するだけ。</dd></div>
+        <div class="reveal d2"><dt>テンプレート</dt><dd>毎日のコーヒーや通勤を、ワンタップで。</dd></div>
+        <div class="reveal"><dt>ウィジェットとSiri</dt><dd>ホーム画面・ロック画面のウィジェット、コントロールセンター、「BunnyBankでコーヒー」。</dd></div>
+        <div class="reveal d1"><dt>複数の通貨</dt><dd>旅行先では現地の通貨で。海外に引っ越したら、基本通貨ごと切り替え。</dd></div>
+        <div class="reveal d2"><dt>旅先を覚える</dt><dd>前に行った街に戻ると、そのとき使ったものが先に出てきます。</dd></div>
+      </dl>
+    </section>
+
+    <section class="band reveal" aria-labelledby="privacy-title">
+      <div class="mochi-wrap">
+        <div class="mochi" data-motion="sleep" aria-label="眠っているMochi"></div>
+        <img class="prop prop-zzz" src="../img/prop-zzz.webp" alt="" loading="lazy">
+      </div>
+      <div>
+        <h2 id="privacy-title">あなたの日記は、あなたの手元に。</h2>
+        <p>アカウント登録も、開発者のサーバーもありません。書いたことはあなたのiPhoneとiCloudの中だけにあり、私には見えません。</p>
+        <ul><li>アカウント不要</li><li>広告なし</li><li>追跡なし</li></ul>
+        <a href="privacy.html">プライバシーポリシーを読む</a>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="reveal">
+        <h2>無料。サブスクなし。</h2>
+        <p>支出の記録に必要なものは、すべて無料。もっと使いたい機能だけを買い切りで追加でき、同じApple AccountのiPhoneならどれでも使えます。</p>
+        <p>レシート読み取り・音声入力・アシスタントには、Apple Intelligence対応のiPhoneが必要です。</p>
+      </div>
+      <div class="receipt reveal d1" aria-label="オプションの買い切りアップグレード">
+        <p class="r-title">BUNNYBANK</p>
+        <p class="r-sub">オプション · 買い切り</p>
+        <hr>
+        <div class="row"><span>アプリ本体</span><span>無料</span></div>
+        <div class="row"><span>レシート読み取り10回</span><span>無料</span></div>
+        <hr>
+        <div class="row"><span>レシート読み取り</span><span>買い切り</span></div>
+        <div class="row"><span>自動化</span><span>買い切り</span></div>
+        <div class="row"><span>ロック画面</span><span>買い切り</span></div>
+        <div class="row"><span>複数通貨</span><span>買い切り</span></div>
+        <div class="row"><span>カスタマイズ</span><span>買い切り</span></div>
+        <hr>
+        <div class="row total"><span>サブスク</span><span>0</span></div>
+        <p class="thanks">ありがとう！♡ またどうぞ</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Hlwan Aung Phyo</span>
+      <span><a href="./">ホーム</a> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシーポリシー</a> · <a href="../" hreflang="en" lang="en" data-lang="en">English</a></span>
+    </div>
+  </footer>
+  <script src="../site.js" defer></script>
+  <script src="../demo.js" defer></script>
+  <script src="../bunny.js" defer></script>
+</body>
+</html>

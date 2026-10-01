@@ -1,11 +1,12 @@
 # BunnyBank website
 
-The public pages for the BunnyBank iOS app: home, support and privacy policy.
+The public pages for the BunnyBank iOS app: home, support and privacy policy. The home page links to the live App Store listing (id6814388982).
 Static HTML and CSS, no build step. Served by GitHub Pages at
 https://hlum.github.io/bunnybank-site/
 
 - `privacy.html`: the Privacy Policy URL for App Store Connect and the app's Settings.
 - `support.html`: the Support URL.
+- `img/app-store-badge-en.svg`, `img/app-store-badge-ja.svg`: the official "Download on the App Store" badges from Apple's marketing tools (black, unmodified). Apple's guidelines: 40px minimum height, quarter-height clear space, never alter or recolour them, one badge per layout, credit line once per site (home footer).
 
 The source lives in the app repository's `website/` folder; copy it here to publish.
 
